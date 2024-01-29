@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Products</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>All products</h1>
+      <form action="/search" method="get">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="product to search..."
+          name="searchItem"
+        />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <table border="1">
+      <thead>
+        <%Object.keys(data[0]).map(key=>{%>
+        <th><%=key%></th>
+        <%})%>
+      </thead>
+      <tbody>
+        <%Object.keys(data).map(key=>{%>
+        <tr>
+          <% Object.keys(data[key]).map((k)=>{%>
+          <td><%=data[key][k]%></td>
+          <% })%>
+        </tr>
+        <%})%>
+      </tbody>
+    </table>
+  </body>
+</html>

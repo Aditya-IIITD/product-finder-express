@@ -1,0 +1,32 @@
+.header {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: blanchedalmond;
+}
+
+input {
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  padding: 0 10px;
+  outline: none;
+  /* background-color: none; */
+}
+
+button {
+  height: 40px;
+  width: 100px;
+  border: none;
+  background-color: aquamarine;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.1s;
+  margin-left: 5px;
+}
+
+button:hover {
+  transform: scale(1.03);
+  outline: 1px solid rgb(51, 231, 171);
+}
