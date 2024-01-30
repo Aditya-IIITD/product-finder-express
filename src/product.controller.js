@@ -13,7 +13,7 @@ export default class ProductController {
 
   searchProducts(req, res) {
     const data = ProductModel.search(req.query.searchItem);
-    if (data) {
+    if (data.length > 0) {
       res.render("products", { data: data });
     } else {
       res.send("Product not found");
